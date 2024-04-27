@@ -1,5 +1,8 @@
 # Remix 2.9 Data or Error pattern
 
+## Demo
+https://stackblitz.com/~/github.com/rphlmr/remix-2.9-data-or-error
+
 📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/guides/vite) for details on supported features.
 
 ## Development
