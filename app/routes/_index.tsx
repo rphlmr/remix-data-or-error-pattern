@@ -13,8 +13,15 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-declare function getPostsIds(): Promise<{ postsIds: number[] }>;
-declare function createNewPost(formData: FormData): Promise<{ postsId: number, createdAt: Date }>;
+
+function getPostsIds(): Promise<{ postsIds: number[] }> {
+  return Promise.resolve({ postsIds: [1, 2, 3] });
+}
+
+function createNewPost(formData: FormData): Promise<{ postsId: number, createdAt: Date }> {
+  return Promise.resolve({ postsId: 123, createdAt: new Date() });
+}
+
 
 export async function loader({ response }: LoaderFunctionArgs) {
   try {
@@ -62,7 +69,7 @@ export default function Index() {
     console.log(error.additionalData);
   }
 
-  return <div></div>;
+  return <div>Read the console</div>;
 }
 
 // Render if loader throws an error
