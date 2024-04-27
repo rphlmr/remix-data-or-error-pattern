@@ -5,7 +5,7 @@ import type {
 import type { AppLoadContext } from "@remix-run/server-runtime/dist/data";
 import { ResponseStub } from "@remix-run/server-runtime/dist/routeModules";
 
-export global {
+declare global {
   import "@remix-run/react/future/single-fetch.d.ts";
 
   export type LoaderFunctionArgs = RRLoaderFunctionArgs<AppLoadContext> & {
