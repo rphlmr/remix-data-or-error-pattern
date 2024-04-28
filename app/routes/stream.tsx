@@ -1,7 +1,6 @@
 import { data } from "~/utils";
-import {Await, useLoaderData} from "@remix-run/react";
-import {Suspense} from "react";
-
+import { Await, useLoaderData } from "@remix-run/react";
+import { Suspense } from "react";
 
 export async function loader() {
   return data({
@@ -31,4 +30,3 @@ export default function Stream() {
     </div>
   );
 }
-
