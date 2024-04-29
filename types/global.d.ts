@@ -68,7 +68,7 @@ declare module "@remix-run/react" {
 
   export function useRouteLoaderData<T>(
     routeId: string,
-  ): SingleFetchSerialize_V2<T>;
+  ): SingleFetchSerialize_V2<T> | undefined;
 
   export function useFetcher<TData = unknown>(
     opts?: Parameters<typeof useFetcherRR>[0],

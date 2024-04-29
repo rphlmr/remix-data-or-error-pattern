@@ -40,8 +40,14 @@ export async function clientLoader({ serverLoader }: ClientLoaderFunctionArgs) {
 
 clientLoader.hydrate = true;
 
+export function HydrateFallback() {
+  return <span>Loading...</span>;
+}
+
 export default function AppLayout() {
   const clientLoaderData = useLoaderData<typeof clientLoader>();
+
+  console.log("AppLayout", clientLoaderData.data.allSources);
 
   return (
     <main>
